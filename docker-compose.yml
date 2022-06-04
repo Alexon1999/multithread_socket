@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  server1:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - shared_network
+
+  server2:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8001:8000
+    networks:
+      - shared_network
+
+  server3:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8002:8000
+    networks:
+      - shared_network
+
+networks:
+  shared_network: {}
