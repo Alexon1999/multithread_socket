@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.11.0b3-slim-bullseye
 WORKDIR /app
 COPY multithreadserver.py ./
 COPY utils.py ./
